@@ -33,7 +33,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-32">
         <div>
           <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-accent mb-4 block">Our Process</span>
-          <h2 className="font-display text-6xl font-black tracking-[-0.04em] mb-8 max-w-sm uppercase leading-[0.85]">Systematic<br />Excellence.</h2>
+          <h2 className="font-display text-[12vw] sm:text-6xl font-black tracking-[-0.04em] mb-8 max-w-sm uppercase leading-[0.85]">Systematic<br />Excellence.</h2>
           <p className="font-sans text-black/60 max-w-md text-sm font-semibold tracking-wider leading-relaxed">
             A research-heavy approach designed to take your brand from concept to cultural impact.
           </p>

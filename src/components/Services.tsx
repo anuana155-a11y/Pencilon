@@ -23,15 +23,15 @@ export default function Services() {
   return (
     <section id="services" className="py-24 px-6 md:px-12 md:py-32 relative z-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-1">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 h-[220px] flex flex-col justify-between group hover:bg-brand-accent/10 transition-colors duration-500"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: index * 0.1, duration: 0.8, ease: "easeOut" }}
+              className="bg-white/5 backdrop-blur-3xl border border-white/10 p-8 md:p-10 h-auto md:h-[220px] flex flex-col justify-between group hover:bg-brand-accent/10 transition-all duration-500"
             >
               <div>
                 <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-white/40 block mb-2">{service.num}</span>

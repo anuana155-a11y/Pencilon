@@ -8,7 +8,7 @@ interface MarqueeProps {
 
 export default function Marquee({ items, speed = 20, direction = "left" }: MarqueeProps) {
   return (
-    <div className="flex overflow-hidden whitespace-nowrap bg-brand-paper py-1 text-black md:py-1.5 border-y border-black/10">
+    <div className="flex overflow-hidden whitespace-nowrap bg-brand-paper py-2 text-black md:py-1.5 border-y border-black/10">
       <motion.div
         className="flex gap-12 md:gap-24 items-center"
         animate={{

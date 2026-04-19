@@ -28,17 +28,17 @@ export default function Works() {
   return (
     <section id="works" className="py-24 px-6 md:px-12 bg-brand-black border-t border-white/5">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
           <div>
             <span className="font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-brand-accent mb-4 block">Case Studies</span>
-            <h2 className="font-display text-7xl md:text-9xl font-black tracking-[-0.05em] uppercase leading-[0.8]">Selected<br />Works.</h2>
+            <h2 className="font-display text-[12vw] sm:text-7xl md:text-9xl font-black tracking-[-0.05em] uppercase leading-[0.85] md:leading-[0.8]">Selected<br />Works.</h2>
           </div>
           <p className="max-w-xs font-sans text-xs font-semibold uppercase tracking-widest text-white/40 leading-relaxed">
             Exploring the intersection of high-concept design and commercial performance.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
           {works.map((work, index) => (
             <motion.div 
               key={index}
@@ -74,9 +74,6 @@ export default function Works() {
                     {work.category}
                   </span>
                 </div>
-                <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-white/20 uppercase">
-                  ( 2026 )
-                </span>
               </div>
             </motion.div>
           ))}

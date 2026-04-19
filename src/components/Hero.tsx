@@ -16,15 +16,15 @@ export default function Hero() {
         style={{ y: y1, rotate }}
         className="pointer-events-none absolute -right-[15%] -top-[10%] -z-10 select-none origin-bottom-right"
       >
-        <Logo className="h-[800px] w-[800px] opacity-[0.03]" />
+        <Logo className="h-[400px] w-[400px] md:h-[800px] md:w-[800px] opacity-[0.03]" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl">
         <motion.h1
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "circOut" }}
-          className="max-w-5xl font-display text-8xl font-black leading-[0.85] tracking-[-0.05em] md:text-[160px] uppercase"
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-5xl font-display text-[15vw] sm:text-8xl font-black leading-[0.85] tracking-[-0.05em] md:text-[160px] uppercase lg:text-[200px]"
         >
           Beyond<br />
           The Digital<br />
@@ -32,20 +32,23 @@ export default function Hero() {
         </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-16 flex flex-col items-start gap-12 md:flex-row md:items-center"
+          transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 md:mt-16 flex flex-col items-start gap-12 md:flex-row md:items-center"
         >
-          <p className="max-w-sm font-sans text-xs font-semibold uppercase tracking-[0.2em] text-white/50 leading-relaxed">
+          <p className="max-w-sm font-sans text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/50 leading-relaxed">
             Located in Malappuram, Kerala. <br />
             Crafting enduring visual languages <br />
             for the next generation of brands.
           </p>
 
-          <button className="group relative flex items-center gap-4 overflow-hidden border-b-2 border-brand-accent pb-2 font-display text-lg font-bold uppercase tracking-tighter transition-all hover:gap-6">
+          <button 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group relative flex items-center gap-4 overflow-hidden border-b-2 border-brand-accent pb-2 font-display text-base md:text-lg font-bold uppercase tracking-tighter transition-all hover:gap-6"
+          >
             <span>Get Started</span>
-            <ArrowRight className="h-5 w-5 text-brand-accent" />
+            <ArrowRight className="h-5 w-5 text-brand-accent transition-transform group-hover:translate-x-1" />
           </button>
         </motion.div>
       </div>
